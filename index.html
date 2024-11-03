@@ -11,11 +11,15 @@
       <nav>
         <ul class="nav-items">
           <li class="nav-item">
-            <button class="nav-button">Home</button>
+            <button id="nav-button">Home</button>
           </li>
           <li class="nav-item">
-            <a href="https://github.com/aarnif" target="_blank" rel="noreferrer"
-              ><button class="nav-button">
+            <a
+              href="https://github.com/aarnif"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button id="nav-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 496 512"
@@ -48,7 +52,50 @@
         </div>
       </header>
 
-      <section class="projects"></section>
+      <section class="projects">
+        <h1 class="projects-header">Projects</h1>
+        <div class="project-cards">
+          <div class="project-card-container">
+            <div id="project-1-card" class="project-card">
+              <div class="project-info">
+                <h2 class="project-title">
+                  Where's Waldo <br />
+                  (A Photo Tagging App)
+                </h2>
+                <p class="project-description">
+                  A fast-paced web game where players race against time to find
+                  and tag hidden characters in detailed images.
+                </p>
+                <div class="project-card-buttons">
+                  <a
+                    href="https://wheres-waldo-view.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><button id="project-1-button" class="project-button">
+                      View Project
+                    </button></a
+                  >
+                  <a
+                    href="https://github.com/aarnif/odin-wheres-waldo-view"
+                    target="_blank"
+                    rel="noreferrer"
+                    ><button id="project-1-button" class="project-button">
+                      View Code
+                    </button></a
+                  >
+                </div>
+              </div>
+              <div class="project-img">
+                <img
+                  src="images/project1.png"
+                  alt="Project 1"
+                  class="project-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </body>
 </html>
