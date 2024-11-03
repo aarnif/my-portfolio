@@ -380,6 +380,10 @@ h1 {
   background-color: #94a3b8;
   scroll-snap-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .other-projects-header {
@@ -390,6 +394,8 @@ h1 {
 
 .other-project-cards {
   margin: 4rem;
+  flex-grow: 1;
+  max-width: 1400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -399,7 +405,7 @@ h1 {
 .other-project-card {
   opacity: 0;
   position: relative;
-  margin: 1rem;
+  margin: 2rem;
   width: 400px;
   height: 400px;
   display: flex;
