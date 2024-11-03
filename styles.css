@@ -63,7 +63,7 @@
   .projects-header {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --projects;
-    animation-range: entry 50% entry 100%;
+    animation-range: entry 10% entry 50%;
   }
 
   .project-card {
@@ -221,8 +221,8 @@ h1 {
   z-index: 10;
   width: 100%;
   background-color: white;
-  scroll-snap-align: center;
-  clip-path: ellipse(170% 100% at 50% 100%);
+  scroll-snap-align: start;
+  clip-path: ellipse(220% 100% at 50% 100%);
 }
 
 .projects-header {
@@ -244,7 +244,6 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  scroll-snap-align: center;
 }
 
 .project-card {
@@ -378,12 +377,12 @@ h1 {
 .other-projects {
   width: 100%;
   background-color: #94a3b8;
-  scroll-snap-align: center;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  scroll-snap-align: start;
 }
 
 .other-projects-header {
