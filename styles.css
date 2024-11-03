@@ -23,6 +23,12 @@
     }
   }
 
+  @keyframes rotate-and-scale {
+    to {
+      transform: rotate(360deg) scale(1.5);
+    }
+  }
+
   header {
     view-timeline: --header;
   }
@@ -57,6 +63,11 @@
     animation-timeline: --project-card-container;
     animation-range: entry 35% cover 50%;
   }
+}
+
+:root {
+  --footer-background: rgba(0, 0, 0, 1);
+  --footer-title-color: white;
 }
 
 html {
@@ -290,4 +301,42 @@ h1 {
 
 #project-1-button:hover {
   background-color: #94a3b8;
+}
+
+footer {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background: var(--footer-background);
+}
+
+.footer-content {
+  flex-grow: 1;
+  height: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--footer-title-color);
+}
+
+.footer-text {
+  margin-right: 4px;
+}
+
+.github-icon {
+  width: 28px;
+  margin-left: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+}
+
+.github-icon:hover {
+  cursor: pointer;
+  animation: rotate-and-scale 1s forwards;
 }
