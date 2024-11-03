@@ -45,6 +45,14 @@
     view-timeline: --project-card;
   }
 
+  .other-projects {
+    view-timeline: --other-projects;
+  }
+
+  .other-project-card {
+    view-timeline: --other-project-card;
+  }
+
   header .header-content {
     animation: scale-out both linear, fade-out both linear;
     animation-timeline: --header;
@@ -62,6 +70,18 @@
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --project-card-container;
     animation-range: entry 35% cover 50%;
+  }
+
+  .other-projects-header {
+    animation: fade-in both linear, translate-y-in both linear;
+    animation-timeline: --other-projects;
+    animation-range: entry 50% entry 100%;
+  }
+
+  .other-project-card {
+    animation: fade-in both linear, translate-y-in both linear;
+    animation-timeline: --other-project-card;
+    animation-range: entry 0% cover 30%;
   }
 }
 
@@ -269,7 +289,7 @@ h1 {
   max-width: 60%;
 }
 
-.project-card img {
+.project-image {
   width: 100%;
   object-fit: cover;
   border-radius: 20px;
@@ -353,6 +373,80 @@ h1 {
 
 #project-5-button:hover {
   background-color: #be123c;
+}
+
+.other-projects {
+  width: 100%;
+  background-color: #94a3b8;
+  scroll-snap-align: center;
+  color: white;
+}
+
+.other-projects-header {
+  opacity: 0;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.other-project-cards {
+  margin: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.other-project-card {
+  opacity: 0;
+  position: relative;
+  flex-grow: 1;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #cbd5e1;
+  color: white;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+.other-project-info {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
+}
+
+.other-project-info:hover {
+  animation: fade-in 0.7s forwards;
+}
+
+.other-project-title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.other-project-button {
+  width: 150px;
+  height: 50px;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.other-project-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.other-project-button:active {
+  transform: scale(0.95);
 }
 
 footer {
