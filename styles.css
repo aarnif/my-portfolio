@@ -316,6 +316,19 @@ h1 {
   background-color: #2563eb;
 }
 
+#project-3-card {
+  background-color: #6d28d9;
+}
+
+#project-3-button {
+  background-color: #5b21b6;
+  border: 1px solid #5b21b6;
+}
+
+#project-3-button:hover {
+  background-color: #6d28d9;
+}
+
 footer {
   height: 70px;
   width: 100%;
