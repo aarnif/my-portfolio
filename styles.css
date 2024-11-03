@@ -137,10 +137,14 @@ header .header-content .content {
   inset: 0;
 }
 
+.hero-text {
+  font-size: 1.5rem;
+  text-align: left;
+  color: white;
+}
+
 h1 {
   font-size: 4rem;
-  text-align: center;
-  color: white;
 }
 
 .projects {
