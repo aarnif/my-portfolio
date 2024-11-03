@@ -329,6 +329,19 @@ h1 {
   background-color: #6d28d9;
 }
 
+#project-4-card {
+  background-color: #0e7490;
+}
+
+#project-4-button {
+  background-color: #115e59;
+  border: 1px solid #115e59;
+}
+
+#project-4-button:hover {
+  background-color: #0e7490;
+}
+
 footer {
   height: 70px;
   width: 100%;
