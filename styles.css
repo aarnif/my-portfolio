@@ -78,7 +78,7 @@
     transform-origin: 50% 0;
   }
 
-  .projects-header {
+  .projects-title {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --projects;
     animation-range: entry 10% entry 50%;
@@ -114,7 +114,7 @@
     animation-range: cover 40% cover 47%;
   }
 
-  .other-projects-header {
+  .other-projects-title {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --other-projects;
     animation-range: cover 20% cover 30%;
@@ -168,7 +168,14 @@
   --nav-button-color-header-hover: #334155;
   --nav-button-color-content-hover: #fff;
 
+  --header-content-background: linear-gradient(135deg, #89cff0, #e0ffff);
+  --hero-greeting-text-color: #f1f5f9;
+  --hero-main-title-color: white;
+  --hero-sub-title-color: #f1f5f9;
+  --hero-description-color: #f1f5f9;
+
   --projects-background-color: #e2e8f0;
+  --projects-title-color: #1e293b;
 
   --project-card-one-background-color: #94a3b8; /* Use same as in the first project card */
   --project-card-one-button-color: #64748b;
@@ -197,7 +204,7 @@
 
   --other-projects-background-color: #94a3b8;
   --other-projects-text-color: #1e293b;
-  --other-projects-header-color: white;
+  --other-projects-title-color: white;
   --other-project-card-background-color: #64748b;
   --other-project-card-text-color: white;
   --other-project-card-button-background-color: rgba(0, 0, 0, 0.4);
@@ -327,7 +334,7 @@ header .header-content .content {
   position: relative;
   height: 100%;
   width: 140%;
-  background: linear-gradient(135deg, #89cff0, #e0ffff);
+  background: var(--header-content-background);
   filter: brightness(0.8);
   left: 50%;
   transform: translateX(-50%);
@@ -337,6 +344,7 @@ header .header-content .content {
   z-index: 2;
   position: absolute;
   inset: 0;
+  bottom: 100px;
 }
 
 .hero-text {
@@ -345,8 +353,32 @@ header .header-content .content {
   color: white;
 }
 
-h1 {
-  font-size: 4rem;
+.hero-greeting-text {
+  margin-bottom: 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--hero-greeting-text-color);
+}
+
+.hero-main-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 6rem;
+  font-weight: bold;
+  color: var(--hero-main-title-color);
+}
+
+.hero-sub-title {
+  margin-top: 0;
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--hero-sub-title-color);
+}
+
+.hero-description {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--hero-description-color);
 }
 
 .projects {
@@ -356,10 +388,13 @@ h1 {
   clip-path: ellipse(220% 100% at 50% 100%);
 }
 
-.projects-header {
+.projects-title {
+  transform: translateY(100%);
   margin-top: 5rem;
+  font-size: 4rem;
   text-align: center;
   opacity: 0;
+  color: var(--projects-title-color);
 }
 
 .project-cards {
@@ -543,14 +578,14 @@ h1 {
   align-items: center;
 }
 
-.other-projects-header {
+.other-projects-title {
   transform: translateY(100%);
   opacity: 0;
   margin-top: 8rem;
   margin-bottom: 8rem;
   text-align: center;
-  font-size: 2rem;
-  color: var(--other-projects-header-color);
+  font-size: 3rem;
+  color: var(--other-projects-title-color);
 }
 
 .other-project-cards {
