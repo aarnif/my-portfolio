@@ -281,8 +281,8 @@ button {
 
 .nav-button {
   flex-grow: 1;
-  background-color: none;
   color: var(--nav-button-color-header);
+  font-size: 1.4rem;
   transition: color 0.3s ease-in-out;
 }
 
@@ -293,12 +293,19 @@ button {
 #nav-header {
   margin-left: 3rem;
   justify-content: start;
+  font-size: 1.5rem;
 }
 
 .github-icon {
-  width: 40px;
-  height: 40px;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   fill: currentColor;
+}
+
+.github-icon:hover {
+  animation: rotate-and-scale 1s forwards;
 }
 
 header {
@@ -702,19 +709,5 @@ footer {
 }
 
 .footer-text {
-  margin-right: 4px;
-}
-
-.github-icon {
-  width: 28px;
-  margin-left: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  fill: currentColor;
-}
-
-.github-icon:hover {
-  cursor: pointer;
-  animation: rotate-and-scale 1s forwards;
+  margin-right: 0.5rem;
 }
