@@ -9,9 +9,17 @@
   <body>
     <div id="wrapper">
       <nav>
+        <button id="nav-header" class="nav-button">
+          <a href="#wrapper"><h2>Aarni Fagerstöm</h2></a>
+        </button>
         <ul class="nav-items">
           <li class="nav-item">
-            <button id="nav-button">Home</button>
+            <button class="nav-button"><a href="#wrapper">Home</a></button>
+          </li>
+          <li class="nav-item">
+            <button class="nav-button">
+              <a href="#projects">Projects</a>
+            </button>
           </li>
           <li class="nav-item">
             <a
@@ -19,7 +27,7 @@
               target="_blank"
               rel="noreferrer"
             >
-              <button id="nav-button">
+              <button class="nav-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 496 512"
@@ -52,7 +60,7 @@
         </div>
       </header>
 
-      <section class="projects">
+      <section id="projects" class="projects">
         <h1 class="projects-header">Projects</h1>
         <div class="project-cards">
           <div class="project-card-container">
