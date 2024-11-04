@@ -17,6 +17,12 @@
     }
   }
 
+  @keyframes translate-x-in {
+    to {
+      transform: translateX(0);
+    }
+  }
+
   @keyframes scale-out {
     to {
       scale: 0.5;
@@ -81,7 +87,31 @@
   .project-card {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --project-card-container;
-    animation-range: entry 45% cover 50%;
+    animation-range: cover 30% cover 40%;
+  }
+
+  .project-title {
+    animation: fade-in both linear, translate-x-in both linear;
+    animation-timeline: --project-card;
+    animation-range: cover 40% cover 43%;
+  }
+
+  .project-description {
+    animation: fade-in both linear, translate-x-in both linear;
+    animation-timeline: --project-card;
+    animation-range: cover 42% cover 45%;
+  }
+
+  .project-card-buttons {
+    animation: fade-in both linear, translate-x-in both linear;
+    animation-timeline: --project-card;
+    animation-range: cover 44% cover 47%;
+  }
+
+  .project-img {
+    animation: fade-in both linear, translate-x-in both linear;
+    animation-timeline: --project-card;
+    animation-range: cover 40% cover 47%;
   }
 
   .other-projects-header {
@@ -370,21 +400,29 @@ h1 {
 }
 
 .project-title {
+  opacity: 0;
+  transform: translateX(-30%);
   font-size: 2rem;
   font-weight: bold;
 }
 
 .project-description {
+  opacity: 0;
+  transform: translateX(-30%);
   font-size: 1.3rem;
 }
 
 .project-card-buttons {
+  opacity: 0;
+  transform: translateX(-30%);
   display: flex;
   justify-content: start;
   margin-top: 1rem;
 }
 
 .project-img {
+  opacity: 0;
+  transform: translateX(30%);
   flex-grow: 1;
   max-width: 60%;
 }
