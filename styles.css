@@ -74,14 +74,14 @@
   header .header-content {
     animation: scale-out both linear, fade-out both linear;
     animation-timeline: --header;
-    animation-range: exit 0% exit 50%, exit 0% exit 30%;
+    animation-range: exit 0% exit 100%, exit 0% exit 100%;
     transform-origin: 50% 0;
   }
 
   .projects-title {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --projects;
-    animation-range: entry 10% entry 50%;
+    animation-range: cover 5% cover 10%;
   }
 
   .project-card {
@@ -168,11 +168,12 @@
   --nav-button-color-header-hover: #334155;
   --nav-button-color-content-hover: #fff;
 
-  --header-content-background: linear-gradient(135deg, #89cff0, #e0ffff);
+  --header-content-background: url("/images/martin-adams-G7sDNMQn_GA-unsplash.jpg");
   --hero-greeting-text-color: #f1f5f9;
   --hero-main-title-color: white;
   --hero-sub-title-color: #f1f5f9;
   --hero-description-color: #f1f5f9;
+  --hero-image-shoutout-text-color: #e2e8f0;
 
   --projects-background-color: #e2e8f0;
   --projects-title-color: #1e293b;
@@ -317,7 +318,7 @@ header .header-content .content {
   inset: 0;
 }
 
-/* Use this for the real image */
+/* Use this for the image element */
 .header-content img {
   position: relative;
   height: 100%;
@@ -329,15 +330,42 @@ header .header-content .content {
   filter: brightness(0.2);
 }
 
-/* Use this dummy background */
+/* Use this image background */
 .header-content-background {
   position: relative;
   height: 100%;
-  width: 140%;
-  background: var(--header-content-background);
+  width: 200%;
+  background-image: var(--header-content-background);
+  background-size: cover;
+  background-position: center;
+  background-size: 200% auto;
   filter: brightness(0.8);
   left: 50%;
   transform: translateX(-50%);
+}
+
+.image-shoutout {
+  z-index: 5;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shoutout-text {
+  color: var(--hero-image-shoutout-text-color);
+  font-size: 1rem;
+}
+
+.shoutout-text a {
+  cursor: pointer;
+  color: var(--hero-image-shoutout-text-color);
+}
+.shoutout-text a:hover {
+  text-decoration: underline;
 }
 
 .content {
@@ -385,7 +413,7 @@ header .header-content .content {
   z-index: 10;
   width: 100%;
   background-color: var(--projects-background-color);
-  clip-path: ellipse(220% 100% at 50% 100%);
+  clip-path: ellipse(250% 100% at 50% 100%);
 }
 
 .projects-title {
