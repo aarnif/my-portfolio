@@ -81,7 +81,7 @@
   .project-card {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --project-card-container;
-    animation-range: entry 35% cover 50%;
+    animation-range: entry 45% cover 50%;
   }
 
   .other-projects-header {
@@ -114,6 +114,34 @@
   --nav-button-color-content: #1e293b;
   --nav-button-color-header-hover: #334155;
   --nav-button-color-content-hover: #fff;
+
+  --projects-background-color: #e2e8f0; /* Use same as in the first project card */
+
+  --project-card-one-background-color: #94a3b8; /* Slate 400 */
+  --project-card-one-button-color: #64748b; /* Slate 500 */
+  --project-card-one-button-color-hover: #94a3b8; /* Slate 400 */
+  --project-card-one-container-background-color: #e2e8f0; /* Slate 200 */
+
+  --project-card-two-background-color: #2563eb; /* Blue 600 */
+  --project-card-two-button-color: #1d4ed8; /* Blue 700 */
+  --project-card-two-button-color-hover: #2563eb; /* Blue 600 */
+  --project-card-two-container-background-color: #bfdbfe; /* Blue 200 */
+
+  --project-card-three-background-color: #6d28d9; /* Purple 700 */
+  --project-card-three-button-color: #5b21b6; /* Purple 800 */
+  --project-card-three-button-color-hover: #6d28d9; /* Purple 700 */
+  --project-card-three-container-background-color: #ddd6fe; /* Purple 200 */
+
+  --project-card-four-background-color: #0e7490; /* Cyan 600 */
+  --project-card-four-button-color: #155e75; /* Cyan 800 */
+  --project-card-four-button-color-hover: #0e7490; /* Cyan 600 */
+  --project-card-four-container-background-color: #cffafe; /* Cyan 100 */
+
+  --project-card-five-background-color: #be123c; /* Rose 700 */
+  --project-card-five-button-color: #9f1239; /* Rose 800 */
+  --project-card-five-button-color-hover: #be123c; /* Rose 700 */
+  --project-card-five-container-background-color: #fecdd3; /* Rose 200 */
+
   --footer-background: rgba(0, 0, 0, 1);
   --footer-title-color: white;
 }
@@ -262,7 +290,7 @@ h1 {
 .projects {
   z-index: 10;
   width: 100%;
-  background-color: white;
+  background-color: var(--projects-background-color);
   clip-path: ellipse(220% 100% at 50% 100%);
 }
 
@@ -273,7 +301,6 @@ h1 {
 }
 
 .project-cards {
-  margin: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,7 +308,7 @@ h1 {
 }
 
 .project-card-container {
-  padding: 5rem;
+  padding: 8rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -351,69 +378,89 @@ h1 {
   transform: scale(0.95);
 }
 
+#project-1-card-container {
+  background-color: var(--project-card-one-container-background-color);
+}
+
 #project-1-card {
-  background-color: #94a3b8;
+  background-color: var(--project-card-one-background-color);
 }
 
 #project-1-button {
-  background-color: #64748b;
-  border: 1px solid #64748b;
+  background-color: var(--project-card-one-button-color);
+  border: 1px solid var(--project-card-one-button-color);
 }
 
 #project-1-button:hover {
-  background-color: #94a3b8;
+  background-color: var(--project-card-one-button-color-hover);
+}
+
+#project-2-card-container {
+  background-color: var(--project-card-two-container-background-color);
 }
 
 #project-2-card {
-  background-color: #2563eb;
+  background-color: var(--project-card-two-background-color);
 }
 
 #project-2-button {
-  background-color: #1d4ed8;
-  border: 1px solid #1d4ed8;
+  background-color: var(--project-card-two-button-color);
+  border: 1px solid var(--project-card-two-button-color);
 }
 
 #project-2-button:hover {
-  background-color: #2563eb;
+  background-color: var(--project-card-two-button-color-hover);
+}
+
+#project-3-card-container {
+  background-color: var(--project-card-three-container-background-color);
 }
 
 #project-3-card {
-  background-color: #6d28d9;
+  background-color: var(--project-card-three-background-color);
 }
 
 #project-3-button {
-  background-color: #5b21b6;
-  border: 1px solid #5b21b6;
+  background-color: var(--project-card-three-button-color);
+  border: 1px solid var(--project-card-three-button-color);
 }
 
 #project-3-button:hover {
-  background-color: #6d28d9;
+  background-color: var(--project-card-three-button-color-hover);
+}
+
+#project-4-card-container {
+  background-color: var(--project-card-four-container-background-color);
 }
 
 #project-4-card {
-  background-color: #0e7490;
+  background-color: var(--project-card-four-background-color);
 }
 
 #project-4-button {
-  background-color: #115e59;
-  border: 1px solid #115e59;
+  background-color: var(--project-card-four-button-color);
+  border: 1px solid var(--project-card-four-button-color);
 }
 
 #project-4-button:hover {
-  background-color: #0e7490;
+  background-color: var(--project-card-four-button-color-hover);
+}
+
+#project-5-card-container {
+  background-color: var(--project-card-five-container-background-color);
 }
 
 #project-5-card {
-  background-color: #be123c;
+  background-color: var(--project-card-five-background-color);
 }
 
 #project-5-button {
-  background-color: #9f1239;
-  border: 1px solid #9f1239;
+  background-color: var(--project-card-five-button-color);
+  border: 1px solid var(--project-card-five-button-color);
 }
 
 #project-5-button:hover {
-  background-color: #be123c;
+  background-color: var(--project-card-five-button-color-hover);
 }
 
 .other-projects {
