@@ -87,13 +87,36 @@
   .other-projects-header {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --other-projects;
-    animation-range: entry 50% entry 100%;
+    animation-range: cover 20% cover 30%;
   }
 
   .other-project-card {
     animation: fade-in both linear, translate-y-in both linear;
     animation-timeline: --other-project-card;
-    animation-range: entry 0% cover 30%;
+  }
+
+  #other-project-1-card {
+    animation-range: cover 20% cover 28%;
+  }
+
+  #other-project-2-card {
+    animation-range: cover 22% cover 30%;
+  }
+
+  #other-project-3-card {
+    animation-range: cover 24% cover 32%;
+  }
+
+  #other-project-4-card {
+    animation-range: cover 26% cover 34%;
+  }
+
+  #other-project-5-card {
+    animation-range: cover 28% cover 36%;
+  }
+
+  #other-project-6-card {
+    animation-range: cover 30% cover 38%;
   }
 
   .nav-button {
@@ -115,32 +138,41 @@
   --nav-button-color-header-hover: #334155;
   --nav-button-color-content-hover: #fff;
 
-  --projects-background-color: #e2e8f0; /* Use same as in the first project card */
+  --projects-background-color: #e2e8f0;
 
-  --project-card-one-background-color: #94a3b8; /* Slate 400 */
-  --project-card-one-button-color: #64748b; /* Slate 500 */
-  --project-card-one-button-color-hover: #94a3b8; /* Slate 400 */
-  --project-card-one-container-background-color: #e2e8f0; /* Slate 200 */
+  --project-card-one-background-color: #94a3b8; /* Use same as in the first project card */
+  --project-card-one-button-color: #64748b;
+  --project-card-one-button-color-hover: #94a3b8;
+  --project-card-one-container-background-color: #e2e8f0;
 
-  --project-card-two-background-color: #2563eb; /* Blue 600 */
-  --project-card-two-button-color: #1d4ed8; /* Blue 700 */
-  --project-card-two-button-color-hover: #2563eb; /* Blue 600 */
-  --project-card-two-container-background-color: #bfdbfe; /* Blue 200 */
+  --project-card-two-background-color: #2563eb;
+  --project-card-two-button-color: #1d4ed8;
+  --project-card-two-button-color-hover: #2563eb;
+  --project-card-two-container-background-color: #bfdbfe;
 
-  --project-card-three-background-color: #6d28d9; /* Purple 700 */
-  --project-card-three-button-color: #5b21b6; /* Purple 800 */
-  --project-card-three-button-color-hover: #6d28d9; /* Purple 700 */
-  --project-card-three-container-background-color: #ddd6fe; /* Purple 200 */
+  --project-card-three-background-color: #6d28d9;
+  --project-card-three-button-color: #5b21b6;
+  --project-card-three-button-color-hover: #6d28d9;
+  --project-card-three-container-background-color: #ddd6fe;
 
-  --project-card-four-background-color: #0e7490; /* Cyan 600 */
-  --project-card-four-button-color: #155e75; /* Cyan 800 */
-  --project-card-four-button-color-hover: #0e7490; /* Cyan 600 */
-  --project-card-four-container-background-color: #cffafe; /* Cyan 100 */
+  --project-card-four-background-color: #0e7490;
+  --project-card-four-button-color: #155e75;
+  --project-card-four-button-color-hover: #0e7490;
+  --project-card-four-container-background-color: #cffafe;
 
-  --project-card-five-background-color: #be123c; /* Rose 700 */
-  --project-card-five-button-color: #9f1239; /* Rose 800 */
-  --project-card-five-button-color-hover: #be123c; /* Rose 700 */
-  --project-card-five-container-background-color: #fecdd3; /* Rose 200 */
+  --project-card-five-background-color: #be123c;
+  --project-card-five-button-color: #9f1239;
+  --project-card-five-button-color-hover: #be123c;
+  --project-card-five-container-background-color: #fecdd3;
+
+  --other-projects-background-color: #94a3b8;
+  --other-projects-text-color: #1e293b;
+  --other-projects-header-color: white;
+  --other-project-card-background-color: #64748b;
+  --other-project-card-text-color: white;
+  --other-project-card-button-background-color: rgba(0, 0, 0, 0.4);
+  --other-project-card-button-background-color-hover: rgba(0, 0, 0, 0.2);
+  --other-project-card-info-overlay-background-color: rgba(0, 0, 0, 0.4);
 
   --footer-background: rgba(0, 0, 0, 1);
   --footer-title-color: white;
@@ -465,8 +497,8 @@ h1 {
 
 .other-projects {
   width: 100%;
-  background-color: #94a3b8;
-  color: white;
+  background-color: var(--other-projects-background-color);
+  color: var(--other-projects-text-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -474,13 +506,17 @@ h1 {
 }
 
 .other-projects-header {
+  transform: translateY(100%);
   opacity: 0;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   text-align: center;
   font-size: 2rem;
+  color: var(--other-projects-header-color);
 }
 
 .other-project-cards {
-  margin: 4rem;
+  margin-bottom: 10rem;
   flex-grow: 1;
   max-width: 1400px;
   display: flex;
@@ -490,6 +526,7 @@ h1 {
 }
 
 .other-project-card {
+  transform: translateY(30%);
   opacity: 0;
   position: relative;
   margin: 2rem;
@@ -498,8 +535,8 @@ h1 {
   display: flex;
   justify-content: space-between;
   border-radius: 20px;
-  background-color: #cbd5e1;
-  color: white;
+  background-color: var(--other-project-card-background-color);
+  color: var(--other-project-card-text-color);
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
     0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
@@ -510,9 +547,9 @@ h1 {
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--other-project-card-info-overlay-background-color);
   border-radius: 20px;
 }
 
@@ -530,12 +567,12 @@ h1 {
   width: 150px;
   height: 50px;
   font-size: 1.1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  background-color: var(--other-project-card-button-background-color);
+  border: 1px solid var(--other-project-card-button-background-color);
 }
 
 .other-project-button:hover {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--other-project-card-button-background-color-hover);
   transition: transform 0.3s ease-in-out;
 }
 
