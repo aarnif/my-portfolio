@@ -126,27 +126,27 @@
   }
 
   #other-project-1-card {
-    animation-range: cover 20% cover 28%;
+    animation-range: cover 15% cover 23%;
   }
 
   #other-project-2-card {
-    animation-range: cover 22% cover 30%;
+    animation-range: cover 17% cover 25%;
   }
 
   #other-project-3-card {
-    animation-range: cover 24% cover 32%;
+    animation-range: cover 19% cover 27%;
   }
 
   #other-project-4-card {
-    animation-range: cover 26% cover 34%;
+    animation-range: cover 21% cover 29%;
   }
 
   #other-project-5-card {
-    animation-range: cover 28% cover 36%;
+    animation-range: cover 23% cover 31%;
   }
 
   #other-project-6-card {
-    animation-range: cover 30% cover 38%;
+    animation-range: cover 25% cover 33%;
   }
 
   .nav-button {
@@ -234,6 +234,10 @@ li,
 button,
 a {
   all: unset;
+}
+
+a {
+  cursor: pointer;
 }
 
 #wrapper {
