@@ -221,30 +221,6 @@ html {
   font-size: 16px;
 }
 
-@media (max-width: 1536px) {
-  html {
-    font-size: 15px;
-  }
-}
-
-@media (max-width: 1280px) {
-  html {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 1024px) {
-  html {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 12px;
-  }
-}
-
 body {
   margin: 0;
   box-sizing: border-box;
@@ -476,6 +452,8 @@ header .header-content .content {
   opacity: 0;
   flex-grow: 1;
   max-width: 1400px;
+  margin-left: 3rem;
+  margin-right: 3rem;
   padding: 3rem;
   display: flex;
   justify-content: space-between;
@@ -488,7 +466,7 @@ header .header-content .content {
 
 .project-info {
   flex-grow: 1;
-  margin-right: 1rem;
+  margin-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -496,20 +474,20 @@ header .header-content .content {
 
 .project-title {
   opacity: 0;
-  transform: translateX(-30%);
+  transform: translateX(30%);
   font-size: 2rem;
   font-weight: bold;
 }
 
 .project-description {
   opacity: 0;
-  transform: translateX(-30%);
+  transform: translateX(30%);
   font-size: 1.3rem;
 }
 
 .project-card-buttons {
   opacity: 0;
-  transform: translateX(-30%);
+  transform: translateX(30%);
   display: flex;
   justify-content: start;
   margin-top: 1rem;
@@ -517,13 +495,14 @@ header .header-content .content {
 
 .project-img {
   opacity: 0;
-  transform: translateX(30%);
+  transform: translateX(-30%);
   flex-grow: 1;
   max-width: 60%;
 }
 
 .project-image {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -735,4 +714,69 @@ footer {
 
 .footer-text {
   margin-right: 0.5rem;
+}
+
+@media (max-width: 1536px) {
+  html {
+    font-size: 15px;
+  }
+
+  .other-project-card {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 1280px) {
+  html {
+    font-size: 14px;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-title {
+    text-align: center;
+  }
+
+  .project-info {
+    margin-left: 0;
+    align-items: center;
+    min-height: 50%;
+  }
+
+  .project-description {
+    text-align: center;
+  }
+
+  .project-button:first-child {
+    margin-right: 2rem;
+  }
+
+  .project-button:last-child {
+    margin-left: 2rem;
+  }
+
+  .project-img {
+    max-width: 100%;
+    max-height: 40%;
+  }
+
+  .other-project-card {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
 }
