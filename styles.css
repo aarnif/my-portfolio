@@ -259,6 +259,10 @@ nav {
   backdrop-filter: blur(10px);
 }
 
+#nav-header * {
+  width: 100%;
+}
+
 .nav-items {
   display: flex;
   align-items: center;
