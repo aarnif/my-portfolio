@@ -285,13 +285,19 @@
 
       <section id="contact-page" class="contact-page">
         <div class="contact-form-container">
-          <form id="contact-form" class="contact-form">
+          <form
+            id="contact-form"
+            class="contact-form"
+            action="https://formsubmit.co/32a8450739d0adeac884fbedd8a64e69"
+            method="POST"
+          >
             <h2 class="contact-form-title">Contact Me</h2>
             <ul class="contact-form-row">
               <li class="contact-form-item">
                 <label for="first-name" class="form-label">FIRST NAME</label>
                 <input
                   id="first-name"
+                  name="first-name"
                   type="text"
                   placeholder="Your first name"
                   required=""
@@ -303,6 +309,7 @@
                 <label for="first-name" class="form-label">LAST NAME</label>
                 <input
                   id="last-name"
+                  name="last-name"
                   type="text"
                   placeholder="Your last name"
                   required=""
@@ -316,6 +323,7 @@
                 <label for="email" class="form-label">EMAIL</label
                 ><input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="Give a valid email address"
                   required=""
@@ -326,6 +334,7 @@
                 <label for="phone-number" class="form-label">PHONE NUMBER</label
                 ><input
                   id="phone-number"
+                  name="phone-number"
                   type="text"
                   placeholder="Give a optional phone number"
                   class="form-input"
@@ -338,6 +347,7 @@
                   >WRITE YOUR MESSAGE BELOW</label
                 ><textarea
                   class="form-text-area"
+                  name="message"
                   type="text"
                   id="message"
                   placeholder="Write your message here"
