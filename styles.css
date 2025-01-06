@@ -181,10 +181,15 @@
   --projects-background-color: #e2e8f0;
   --projects-title-color: #1e293b;
 
-  --project-card-one-background-color: #94a3b8; /* Use same as in the first project card */
-  --project-card-one-button-color: #64748b;
-  --project-card-one-button-color-hover: #94a3b8;
-  --project-card-one-container-background-color: #e2e8f0;
+  --project-card-zero-background-color: #94a3b8;
+  --project-card-zero-button-color: #64748b;
+  --project-card-zero-button-color-hover: #94a3b8;
+  --project-card-zero-container-background-color: #e2e8f0;
+
+  --project-card-one-background-color: #facc15;
+  --project-card-one-button-color: #eab308;
+  --project-card-one-button-color-hover: #facc15;
+  --project-card-one-container-background-color: #fef08a;
 
   --project-card-two-background-color: #2563eb;
   --project-card-two-button-color: #1d4ed8;
@@ -545,6 +550,23 @@ header .header-content .content {
 
 .project-button:active {
   transform: scale(0.95);
+}
+
+#project-0-card-container {
+  background-color: var(--project-card-zero-container-background-color);
+}
+
+#project-0-card {
+  background-color: var(--project-card-zero-background-color);
+}
+
+#project-0-button {
+  background-color: var(--project-card-zero-button-color);
+  border: 1px solid var(--project-card-zero-button-color);
+}
+
+#project-0-button:hover {
+  background-color: var(--project-card-zero-button-color-hover);
 }
 
 #project-1-card-container {
