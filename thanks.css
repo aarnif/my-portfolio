@@ -1,0 +1,53 @@
+@keyframes slide-in {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: slide-in 0.5s ease-in-out;
+}
+
+.thank-you-title {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 3rem;
+  color: #2c3e50;
+  text-align: center;
+  border-bottom: 2px solid #e74c3c;
+}
+
+p {
+  margin-bottom: 0.3rem;
+  font-size: 1.4rem;
+  color: #555;
+  text-align: center;
+}
+
+a {
+  color: #e74c3c;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
