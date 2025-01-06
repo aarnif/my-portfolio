@@ -164,6 +164,23 @@
   }
 }
 
+@keyframes bounce-in {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateY(-20px);
+    opacity: 0.5;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 :root {
   --body-font: "Roboto", sans-serif;
   --nav-button-color-header: #fff;
@@ -417,6 +434,7 @@ header .header-content .content {
   font-size: 1.5rem;
   text-align: left;
   color: white;
+  animation: bounce-in 0.5s ease-in-out;
 }
 
 .hero-greeting-text {
