@@ -183,7 +183,7 @@
   --nav-button-color-header-hover: #334155;
   --nav-button-color-content-hover: #fff;
 
-  --header-content-background: url("images/martin-adams-G7sDNMQn_GA-unsplash.jpg");
+  --header-content-background: url("images/shaochen-yang-0JBkaEBmvO8-unsplash.jpg");
   --hero-greeting-text-color: #f1f5f9;
   --hero-main-title-color: white;
   --hero-sub-title-color: #f1f5f9;
@@ -368,28 +368,15 @@ header .header-content .content {
   inset: 0;
 }
 
-/* Use this for the image element */
-.header-content img {
-  position: relative;
-  height: 100%;
-  width: 140%;
-  object-fit: cover;
-  inset: 0;
-  left: 50%;
-  translate: -50% 0;
-  filter: brightness(0.2);
-}
-
 /* Use this image background */
 .header-content-background {
   position: relative;
   height: 100%;
-  width: 200%;
+  width: 190%;
   background-image: var(--header-content-background);
   background-size: cover;
   background-position: center;
-  background-size: 200% auto;
-  filter: brightness(0.8);
+  filter: brightness(0.3);
   left: 50%;
   transform: translateX(-50%);
 }
